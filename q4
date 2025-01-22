@@ -1,0 +1,39 @@
+import java.util.*;
+class MaximumSubarraySum
+ {
+     public static void main(String args[])
+     {
+     Scanner in=new Scanner(System.in);
+     int n;
+     int i;
+     System.out.println("Enter size of array");
+     n=in.nextInt();
+     int arr[]=new int[n];
+     System.out.println("Enter elements in array");
+     {
+         for(i=0;i<n;i++)
+         arr[i]=in.nextInt();
+    }
+    
+    public static void MaxSubarray()
+    {
+        int maxSum = arr[0];  // Initialize with the first element
+        int currentSum = arr[0];  // Initialize with the first element
+
+        // Loop through the array starting from the second element
+        for (int i = 1; i < arr.length; i++) 
+        {
+            currentSum = Math.max(arr[i], currentSum + arr[i]);
+            maxSum = Math.max(maxSum, currentSum);
+        }
+
+        // Output the maximum sum
+        System.out.println("Maximum Subarray Sum: " + maxSum);
+    }
+
+    public static void main(String[] args) 
+    {
+        
+        findMaxSubarray(arr);  // Call the function to find the max sum
+    }
+}
