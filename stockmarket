@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Stocks
+class Stockmarket
 {
     public static void main(String args[])
     {
